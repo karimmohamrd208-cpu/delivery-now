@@ -1,19 +1,11 @@
-// -----------------------------
-// 1) Active Link تلقائي
-// -----------------------------
 console.log("JavaScript is working!");
-
-const links = document.querySelectorAll(".nav-links a");
+const links = document.querySelectorAll("nav a");
 
 links.forEach(link => {
   if (link.href === window.location.href) {
     link.classList.add("active");
   }
 });
-
-// -----------------------------
-// 2) Smooth Scroll للروابط الداخلية
-// -----------------------------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
@@ -24,11 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
-});
-
-// -----------------------------
-// 3) رسالة بسيطة لأي Form
-// -----------------------------
+}); 
 const forms = document.querySelectorAll("form");
 
 forms.forEach(form => {
@@ -37,11 +25,7 @@ forms.forEach(form => {
     alert("Form submitted successfully!");
     form.reset();
   });
-});
-
-// -----------------------------
-// 4) Animation بسيطة لصفحة المنتجات
-// -----------------------------
+}); 
 const cards = document.querySelectorAll(".product-card");
 
 cards.forEach((card, i) => {
@@ -54,10 +38,6 @@ cards.forEach((card, i) => {
     card.style.transform = "translateY(0)";
   }, i * 120);
 });
-
-// -----------------------------
-// 6) Scroll لتحريك العناصر (اختياري وجميل)
-// -----------------------------
 const reveal = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", function () {
